@@ -1,0 +1,16 @@
+python run_weibo_classifier.py \
+  --task_name=weibo \
+  --do_train=false \
+  --do_eval=false \
+  --do_predict=true \
+  --data_dir=GLUE_DIR/WEIBO \
+  --vocab_file=BERT_BASE_DIR/chinese_L-12_H-768_A-12/vocab.txt \
+  --bert_config_file=BERT_BASE_DIR/chinese_L-12_H-768_A-12/bert_config.json \
+  --init_checkpoint=BERT_BASE_DIR/chinese_L-12_H-768_A-12/bert_model.ckpt \
+  --max_seq_length=128 \
+  --train_batch_size=32 \
+  --eval_batch_size=8 \
+  --predict_batch_size=8 \
+  --learning_rate=2e-5 \
+  --num_train_epochs=3.0 \
+  --output_dir=weibo_output
